@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "PTB1";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>PTB1</h2>
+
+@using (Html.BeginForm())
+{
+    <label>Nhập vào giá trị a:</label>
+    <input type="text" name="Gta" />
+    <br/>
+    <lable>Nhập vào giá trị b:</lable>
+    <input type="text" name="Gtb" />
+    <br/>
+    <input type="submit" value="Sovle"/>
+}
+<label>Giá trị x là: @ViewBag.Giatrix</label>
+    
+
+
+
