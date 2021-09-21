@@ -11,8 +11,10 @@ namespace PTB1.Models
         public LTQLDbContext() : base("name=LTQLDbcontext")
         {
         }
-        public virtual DbSet<Account> Account { get; set; }
+        public virtual DbSet<Account> Accounts { get; set; }
         public virtual DbSet<Student> Students { get; set; }
+        public virtual DbSet<Employee> Employees { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Account>()
@@ -22,7 +24,9 @@ namespace PTB1.Models
             .IsUnicode(false);
 
             modelBuilder.Entity<Student>().Property(e => e.StudentID).IsUnicode(false);
-            modelBuilder.Entity<Student>().Property(e => e.StudentName).IsUnicode(false);
+            modelBuilder.Entity<Student>().Property(e => e.StudentName).IsUnicode(true);
+            modelBuilder.Entity<Employee>().Property(e => e.EmployeeNow).IsUnicode(false);
+            modelBuilder.Entity<Employee>().Property(e => e.EmployeeNow).IsUnicode(false);
         }
     }
 }

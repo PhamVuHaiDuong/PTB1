@@ -132,10 +132,21 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202109210117464_IntialCreate.cs" />
+    <Compile Include="Migrations\202109210117464_IntialCreate.designer.cs">
+      <DependentUpon>202109210117464_IntialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109210205240_Migration_Employee.cs" />
+    <Compile Include="Migrations\202109210205240_Migration_Employee.designer.cs">
+      <DependentUpon>202109210205240_Migration_Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\GPTB1.cs" />
     <Compile Include="Models\LTQLDbContext.cs" />
     <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\tableAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -191,6 +202,14 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202109210117464_IntialCreate.resx">
+      <DependentUpon>202109210117464_IntialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109210205240_Migration_Employee.resx">
+      <DependentUpon>202109210205240_Migration_Employee.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

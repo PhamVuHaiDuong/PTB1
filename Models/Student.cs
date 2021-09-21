@@ -9,5 +9,6 @@ namespace PTB1.Models
         [Key]
         public string StudentID { get; set; }
         public string StudentName { get; set; }
+        public string Address { get; set; }
     }
 }
