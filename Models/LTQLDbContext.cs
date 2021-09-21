@@ -8,12 +8,13 @@ namespace PTB1.Models
 {
     public partial class LTQLDbContext : DbContext
     {
-        public LTQLDbContext() : base("name=LTQLDbcontext")
+        public LTQLDbContext() : base("name=LTQLDbContext")
         {
         }
         public virtual DbSet<Account> Accounts { get; set; }
         public virtual DbSet<Student> Students { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
+        
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
